@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Predictive Analysis of Nitrate Concentration in Freshwater Streams"
+  title: "Alex Reviews Complex Papers: A Blog"
   navbar:
     right:
       - text: About
