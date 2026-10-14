@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog Template",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\n\n\nPhoto Credit SGS Australia, 2026"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Alex Delamer",
-    "section": "",
-    "text": "I am a student in the Masters of Business Analytics at Monash University, and hold an undergraduate degree in Zoology from Trinity College Dublin. I have previously worked in the telecommunications industry in Ireland, at a small company that supplied fibre optic installation and testing equipment to a large section of the Irish market.\nIn my euphemistically named “free” time, I work as a freelance esports broadcaster for TrackMania and Rocket League.\nMy background has given me a varied interest when it comes to statistical work; I am equally comfortable with ecological datasets and logistical datasets. As long as there’s a story that can be told (and there always is!), I’m happy to spend time on the analysis."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ETC5523 Blog Assessment",
-    "section": "",
-    "text": "Predicting nitrate concentration in freshwater streams\n\n\nOriginal Author(s): Kermorvant et al., 2023\n\n\n\nPaper Summaries\n\n\n\n\n\n\n\n\n\nOct 14, 2026\n\n\nAlex Delamer\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/kermorvant-2023/index.html",
     "href": "posts/kermorvant-2023/index.html",
     "title": "Predicting nitrate concentration in freshwater streams",
@@ -54,5 +33,19 @@
     "title": "Predicting nitrate concentration in freshwater streams",
     "section": "Additional Reading (this is definitely not my references from part 1 repurposed into a table to meet the rubric)",
     "text": "Additional Reading (this is definitely not my references from part 1 repurposed into a table to meet the rubric)\n\n\n\n\nTable 1\n\n\n\n\n\n\nPaper name\nYear\nAuthors\n\n\n\n\nAnomaly Detection in Streaming Environmental Sensor Data: A Data-Driven Modeling Approach\n2010\nHill, D. J., & Minsker, B. S.\n\n\nEffects of Nutrient Enrichment in the Nation's Estuaries: A Decade of Change\n2008\nBricker, S. B., Longstaff, B., Dennison, W., Jones, A., Boicourt, K., Wicks, C., et al.\n\n\nEnvironmental Sensor Networks: A Revolution in the Earth System Science?\n2006\nHart, J. K., & Martinez, K.\n\n\nNitrate N Loss by Leaching and Surface Runoff in Agricultural Land: A Global Issue (A Review)\n2019\nWang, Z. H., & Li, S. X.\n\n\nNutrient Enrichment Drives Gulf of Mexico Hypoxia\n2009\nBoesch, D. F., Boynton, W. R., Crowder, L. B., Diaz, R. J., Howarth, R. W., Mee, L. D., et al."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Alex Delamer",
+    "section": "",
+    "text": "I am a student in the Masters of Business Analytics at Monash University, and hold an undergraduate degree in Zoology from Trinity College Dublin. I have previously worked in the telecommunications industry in Ireland, at a small company that supplied fibre optic installation and testing equipment to a large section of the Irish market.\nIn my euphemistically named “free” time, I work as a freelance esports broadcaster for TrackMania and Rocket League.\nMy background has given me a varied interest when it comes to statistical work; I am equally comfortable with ecological datasets and logistical datasets. As long as there’s a story that can be told (and there always is!), I’m happy to spend time on the analysis."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ETC5523 Blog Assessment",
+    "section": "",
+    "text": "Predicting nitrate concentration in freshwater streams\n\n\nOriginal Author(s): Kermorvant et al., 2023\n\n\n\nPaper Summaries\n\n\n\n\n\n\n\n\n\nOct 14, 2026\n\n\nAlex Delamer\n\n\n\n\n\nNo matching items"
   }
 ]
