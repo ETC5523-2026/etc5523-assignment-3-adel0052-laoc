@@ -1,0 +1,9 @@
+/* css styles */
+.navbar {
+  background-color: #222222;
+}
+
+#quarto-content h3,
+main h3 {
+  color: #D98966;
+}
