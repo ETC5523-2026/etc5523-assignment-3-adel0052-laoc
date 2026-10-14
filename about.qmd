@@ -1,13 +1,17 @@
 ---
-title: "About"
-image: profile.jpg
+title: "Alex Delamer"
+image: profile.jpeg
 about:
   template: jolla
   links:
     - icon: github
       text: Github
-      href: https://github.com/etc5523-2022
+      href: https://github.com/adel0052-laoc
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+I am a student in the Masters of Business Analytics at Monash University, and hold an undergraduate degree in Zoology from Trinity College Dublin. I have previously worked in the telecommunications industry in Ireland, at a small company that supplied fibre optic installation and testing equipment to a large section of the Irish market. 
+
+In my euphemistically named "free" time, I work as a freelance esports broadcaster for TrackMania and Rocket League.
+
+My background has given me a varied interest when it comes to statistical work; I am equally comfortable with ecological datasets and logistical datasets. As long as there's a story that can be told (and there always is!), I'm happy to spend time on the analysis.
