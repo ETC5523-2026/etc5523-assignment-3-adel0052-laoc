@@ -70,6 +70,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -115,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Predicting nitrate concentration in freshwater streams</h1>
             <p class="subtitle lead">Original Author(s): Kermorvant et al., 2023</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">paper summaries</div>
+                <div class="quarto-category">Paper Summaries</div>
               </div>
                   </div>
   </div>
@@ -152,6 +156,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="link-to-original-paper" class="level3">
+<h3 class="anchored" data-anchor-id="link-to-original-paper">Link to original paper:</h3>
+<p><a href="https://cwd.numbat.space/assignments/assignment-2-papers/Kermorvant2023.pdf">“Understanding links between water-quality variables and nitrate concentration in freshwater streams using high frequency sensor data” by Kermorvant et al., 2023</a></p>
+<p>Links to related papers can be found in <a href="#tbl-additional-reading" class="quarto-xref">Table&nbsp;1</a> at the end of the document if you want to read more!</p>
+</section>
 <section id="problem-description" class="level2">
 <h2 class="anchored" data-anchor-id="problem-description">Problem Description</h2>
 <p>If you read the news, you may have seen a news article at some point in the last few years with a headline along the lines of <strong>“The water source this small town relies found to be <em>contaminated</em>”</strong>. A lot of the time it’s not entirely clear what exactly the contaminant was; the only thing that’s clear is that someone has done something wrong, and now there’s a bunch of people with brown water coming out of their taps at home.</p>
@@ -169,16 +178,96 @@ ul.task-list li input[type="checkbox"] {
 <li>How turbid (cloudy) the water is</li>
 <li>How much oxygen is dissolved in the water.</li>
 </ul>
-<p>And so, enter Kermorvant et al.&nbsp;in 2023! Using the easily measured variables above, they were able to use statistical modelling to predict nitrate concentration in 3 bodies of water <em>very</em> accurately, potentially paving the way for future cheap and effective monitoring of nitrate concentration in bodies of water around the world.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="thumbnail.jpg" class="img-fluid figure-img"></p>
 <figcaption>Photo Credit SGS Australia, 2026</figcaption>
 </figure>
 </div>
+<p>And so, enter Kermorvant et al.&nbsp;in 2023! Using the easily measured variables above, they were able to use statistical modelling to predict nitrate concentration in 3 bodies of water <em>very</em> accurately, potentially paving the way for future cheap and effective monitoring of nitrate concentration in bodies of water around the world.</p>
+<p>One of the major problems with this kind of predictive modelling for water quality variables is that water systems are <em>incredibly</em> complex. This results in relationships between two identical variables being completely different at different sites. Keep this in mind; we’ll return to it in the conclusion.</p>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>In this paper, Kermorvant et al.&nbsp;used open-source data from the National Ecological Observatory Network (NEON). NEON provides data from sites across the United States of America, and all their sites are equipped with permanent on-site sensors that provide high-frequency, standardised measurements. They picked three sites that were very different from each other in terms of location and climate to prove their methods could work anywhere; the Arikaree River in Colorado, Caribou-Poker Creeks Research Watershed in Alaska, and Lewis Run in Virginia.</p>
+<p>Once they had their sites selected and had collected the variables we talked about above, the authors used a two-step modelling approach to analyse their data. In laymans terms; they performed a statistical process on the data, then did more statistics on the results of that first process. At some of the sites they tested, just doing the first step would have allowed them to predict the nitrate concentration in the water there with a very high degree of accuracy. At other sites however, the second step accounted for up to 25% of the predictive power of their approach.</p>
+<p>As discussed earlier, one of the major issues with this type of predictive analysis for water quality variables is the changing relationships between variables across different freshwater systems. The plots below (<a href="#fig-nitrate-time" class="quarto-xref">Figure&nbsp;1</a>) show the relationship between nitrate concentration and the conductivity of water at each of the three sites. Don’t worry about fully understanding them; the main takeaway here should be that each of them has a different shape. This means that knowing what the conductivity of the water is at a new site and knowing how much nitrate was in the water at that conductivity at an old site isn’t enough. In order to be able to predict the nitrate concentration in the water at a new site, we need measurements of all the variables we’ve already talked about <em>and</em> we need to set up new models for the new site. In order to set up those new models, this method does require that we spend some time measuring nitrate concentration alongside those other variables, so that the relationships between water quality variables at the new site can be properly established.</p>
+<p>Keep that in the same corner of your mind as the first piece of information we’re storing for the conclusion!</p>
+<div id="fig-nitrate-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nitrate-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="nitrate-time.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nitrate-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A series of plots from the original paper, showing that nitrate concentration had a different relationship with specific conductance at each of the three sites they worked at
+</figcaption>
+</figure>
+</div>
+<p>There’s a key question we should answer before we wrap things up here though: just how effective are the techniques described by Claire Kermorvant and her co-authors? In a word: <strong>very</strong>. The models they created were able to account for an astonishing <strong>99% of the variation in nitrate concentration in the water at all three of their sites</strong>. It is worth reiterating that these three sites are spread across North America, in Colorado, Alaska and Virginia. They are all part of very different ecosystems, and experience very different conditions throughout the year. Despite that, Kermorvant and (hopefully) friends have managed to show that they have a method that is almost as effective as real-time monitoring for nitrate concentration at each of the three sites.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>So that’s it then, right? This method is basically as good as those expensive and time-consuming direct nitrate sampling methods we want to replace, and it’s much cheaper and easier, so we can just deploy it immediately to every water system in the world we might think is at risk of nitrate poisoning and call it a job well done?</p>
+<p>Not quite.</p>
+<p>Remember, I’ve asked you to hold onto two key pieces of information:</p>
+<ol type="1">
+<li>The relationship between two water quality variables will be different at different sites.</li>
+<li>This method <em>requires</em> that we spend some time measuring nitrate concentration in order to establish functioning predictive models for a new site.</li>
+</ol>
+<p>The second point is a direct consequence of the first, and the overall result here is that this is not a silver bullet solution to all the issues we have with monitoring nitrate concentration in waterways. It’s not necessarily clear from the original paper how long you’d need to spend measuring nitrate concentration at a new site in order to have a strong ability to predict nitrate concentration there (probably because that would vary from site to site) but it’s a safe bet that the answer is at minimum several months. That’s a potentially prohibitive upfront cost for a lot of organisations who monitor water quality, who in many places in the last few years <a href="https://environmentvictoria.org.au/2025/12/04/victorias-gutting-of-environment-agencies-poses-grave-threats-to-nature/">have seen themselves targeted foir budget cuts and layoffs already</a>.</p>
+<p>What this paper does show is that while the relationships between different indicators of water quality in freshwater systems are complex, they’re not impenetrable. There are patterns to be found, and modern modelling techniques are able to make sense of those patterns. In the words of the original authors there’s hope that work like this, “provides a basis for future studies focused on the prediction of other critically important, water-quality variables that cannot be measured using in-situ sensors or when the sensors themselves are cost prohibitive”. As always science is collaborative, and this may prove to be an important foundation in allowing for accurate prediction of water quality at sites where testing is not feasible in future.</p>
+</section>
+<section id="additional-reading-this-is-definitely-not-my-references-from-part-1-repurposed-into-a-table-to-meet-the-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="additional-reading-this-is-definitely-not-my-references-from-part-1-repurposed-into-a-table-to-meet-the-rubric">Additional Reading (this is <em>definitely</em> not my references from part 1 repurposed into a table to meet the rubric)</h2>
+<div class="cell">
+<div id="tbl-additional-reading" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-additional-reading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-additional-reading-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped table-hover do-not-create-environment caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Paper name</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Year</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Authors</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1016/j.envsoft.2009.08.010" style="     ">Anomaly Detection in Streaming Environmental Sensor Data: A Data-Driven Modeling Approach</a></td>
+<td style="text-align: center;">2010</td>
+<td style="text-align: left;">Hill, D. J., &amp; Minsker, B. S.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1016/j.hal.2008.08.028" style="     ">Effects of Nutrient Enrichment in the Nation's Estuaries: A Decade of Change</a></td>
+<td style="text-align: center;">2008</td>
+<td style="text-align: left;">Bricker, S. B., Longstaff, B., Dennison, W., Jones, A., Boicourt, K., Wicks, C., et al.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1016/j.earscirev.2006.05.001" style="     ">Environmental Sensor Networks: A Revolution in the Earth System Science?</a></td>
+<td style="text-align: center;">2006</td>
+<td style="text-align: left;">Hart, J. K., &amp; Martinez, K.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://doi.org/10.1016/bs.agron.2019.01.007" style="     ">Nitrate N Loss by Leaching and Surface Runoff in Agricultural Land: A Global Issue (A Review)</a></td>
+<td style="text-align: center;">2019</td>
+<td style="text-align: left;">Wang, Z. H., &amp; Li, S. X.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://doi.org/10.1029/2009EO140001" style="     ">Nutrient Enrichment Drives Gulf of Mexico Hypoxia</a></td>
+<td style="text-align: center;">2009</td>
+<td style="text-align: left;">Boesch, D. F., Boynton, W. R., Crowder, L. B., Diaz, R. J., Howarth, R. W., Mee, L. D., et al.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 
 
 </section>
